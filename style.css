@@ -1,0 +1,24 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+}
+
+.bgimg {
+    position: relative;
+    margin: 0 auto;
+    <!-- opacity: 0.65; --> 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/1.jpeg");
+    height: 411px;
+    width: 720px;
+}
+
+#logo{
+    max-width:380px;
+    max-height:108px;
+    padding:10px;
+}

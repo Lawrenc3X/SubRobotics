@@ -1,3 +1,45 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script type="text/javascript">
+        function start() {
+            var rotator = document.getElementById('rotator');
+            var imageDir = 'images';
+            var delayInSeconds = 3;
+            var fadeInSeconds = 0.5;
 
+            var images = ['1.jpeg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpeg'];
 
+            var num = 0;
+            var changeImage = function() {
+                var len = images.length;
+                $("#rotator").fadeOut(fadeInSeconds * 1000);
+                rotator.style.backgroundImage = "url(" + imageDir + "/" + images[num++] + ")";
+                $("#rotator").hide().fadeIn(fadeInSeconds * 1000);
+                if (num == len) {
+                    num = 0;
+                }
+            };
+            setInterval(changeImage, delayInSeconds * 1000);
+        };
+        window.onload=function(){
+            start();
+        };
+    </script>
+</head>
+<body>
+
+<a href=""> <img id="logo" src="images/robo_logo.png"> </a>
+
+<div class="bgimg" id="rotator">
+</div>
+
+<p style="padding:5px 15px">This example creates a half page background image. Try to resize the browser window to see how it always will cover 50% of the screen, and that it scales nicely on all screen sizes.</p>
+
+<footer style="padding:5px 15px"> <small>&copy; Copyright 2021, SGSRobotics</small> </footer>
+
+</body>
+</html>
