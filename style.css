@@ -1,24 +1,109 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    font: 400 15px/1.8 "Lato", sans-serif;
-    color: #777;
-}
-
-.bgimg {
+#header {
     position: relative;
+    width: 900px;
     margin: 0 auto;
-    <!-- opacity: 0.65; --> 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("images/1.jpeg");
-    height: 411px;
-    width: 720px;
+    top: -10px;
 }
 
-#logo{
-    max-width:380px;
-    max-height:108px;
-    padding:10px;
+.fadein {
+    position: relative;
+    width: 900px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.fadein img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    width: 1024px;/*4096px;*/
+    height: 683px/*2731px;*/
+}
+
+h1#logo-text a {
+	position: absolute;
+	margin: 0; padding: 0;
+	/* font: bold 60px 'Trebuchet MS', Arial, Sans-serif; */
+    font: bold 60px Arial, Verdana, Helvetica, sans-serif;
+	letter-spacing: -2px;
+	color: #dd193b;
+	text-decoration: none;
+
+	/* change the values of top and left to adjust the position of the logo*/
+	top: 5px; left: 15px;
+}
+
+h1#logo-text span {
+	color: #000;
+}
+
+p#slogan {
+	position: absolute;
+	margin: 0; padding: 0;
+	font: bold 16px 'Trebuchet MS', Arial, Sans-serif;
+	text-transform: none;
+	color: #dd193b;
+
+	/* change the values of top and left to adjust the position of the slogan*/
+	top: 65px; left: 45px;
+}
+
+ul {
+	position: absolute;
+	list-style: none;
+	text-transform: uppercase;
+	padding: 0;	margin: 0;	
+	right: 0; bottom: 0;
+    background-color: #000;
+}
+
+ul li {
+    outline-offset: -2px;
+	display: inline;
+	margin: 0; padding: 0;
+}
+
+ul li a {
+	display: block;
+	float: left;
+	width: auto;
+	margin: 0;
+	padding: 0 15px;
+	color: #FFF;
+	font: bold 13px/52px "Century Gothic", "Trebuchet MS";
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+
+ul li:hover {
+    outline: 4px dotted #dd193b;
+}
+
+#content-wrap {
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+	background: #E2DDD9 repeat-y center top;
+    outline: 2px solid black;
+    outline-offset: -2px;
+}
+
+#content-wrap h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 0px 0px 10px;
+}
+.post-meta {
+    position: relative;
+    top: -15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 10px 0px 10px;
+}
+
+.post-info {
+    position: relative;
+    top: -15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 0px 0px 25px;
 }
