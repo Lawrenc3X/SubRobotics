@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SGS Robotics</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+        <script type="text/javascript">
+            $(function(){
+                $('.fadein img:gt(0)').hide();
+                setInterval(function(){
+                  $('.fadein :first-child').fadeOut(1500)
+                     .next('img').fadeIn(1500)
+                     .end().appendTo('.fadein');}, 
+                  3000);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="fadein">
+                <img src="images/1.jpeg" style="top: -350px;">
+                <img src="images/2.jpeg" style="top: -300px;">
+                <img src="images/3.jpeg" style="top: -100px;">
+                <img src="images/4.jpeg" style="top: -300px;">
+                <img src="images/5.jpeg" style="top: -300px;">
+            </div>
+
+            <h1 id="logo-text"><a href="index.html" title="">SGS<span>Robotics</span></a></h1>
+            <p id="slogan">SGS AUV Robotics Team</p>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="auv.html">Our AUV</a></li>
+                <li style="outline: 4px solid #dd193b"><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+
+        <div id="content-wrap">
+            <h2>Photo Gallery</h2>
+            <p style="position:relative; top:-9px; font-family: Arial, Helvetica, sans-serif;padding:0px 10px 0px 12px;">
+                <a data-flickr-embed="true" href="https://www.flickr.com/gp/9936561@N08/ev0629" title="WP_20170716_12_10_02_Pro" target="_blank">
+                    <img src="https://farm5.staticflickr.com/4291/36012747976_83d2278820.jpg" width="500" height="281" alt="WP_20170716_12_10_02_Pro">
+                </a>
+            </p>
+        </div>
+
+        <footer style="padding:5px 15px"> <small>&copy; Copyright 2021, SGSRobotics</small> </footer>
+    </body>
+</html>
+
+
