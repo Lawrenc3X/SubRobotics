@@ -27,7 +27,7 @@ h1#logo-text a {
 	/* font: bold 60px 'Trebuchet MS', Arial, Sans-serif; */
     font: bold 60px Arial, Verdana, Helvetica, sans-serif;
 	letter-spacing: -2px;
-	color: #dd193b;
+	color: #cc092f;
 	text-decoration: none;
 
 	/* change the values of top and left to adjust the position of the logo*/
@@ -43,7 +43,7 @@ p#slogan {
 	margin: 0; padding: 0;
 	font: bold 16px 'Trebuchet MS', Arial, Sans-serif;
 	text-transform: none;
-	color: #dd193b;
+	color: #cc092f;
 
 	/* change the values of top and left to adjust the position of the slogan*/
 	top: 65px; left: 45px;
@@ -51,6 +51,7 @@ p#slogan {
 
 ul {
 	position: absolute;
+    border: 1px solid #cc092f;
 	list-style: none;
 	text-transform: uppercase;
 	padding: 0;	margin: 0;	
@@ -58,7 +59,7 @@ ul {
     background-color: #000;
     z-index: 999 !important;
     overflow: hidden;
-    background-color: #333;
+    background-color: #cc092f;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -66,10 +67,12 @@ ul {
     margin: 0 auto;
 }
 
+
+
 ul li {
     outline-offset: -4px;
-	display: inline;
-	margin: 0; padding: 0;
+	display: inline-flex;
+	margin: 0; padding:0 ;
 }
 
 ul li a {
@@ -86,19 +89,22 @@ ul li a {
 
 
 ul li:hover {
-    outline: 4px dashed #dd193b;
+    outline: 2px dashed white;
+
 }
 
 #active {
-    outline: 4px solid #dd193b;
+    outline: 2px solid white;
+
 }
+
 
 #content-wrap {
     position: relative;
     width: 900px;
     margin: 0 auto;
-	background: #E2DDD9 repeat-y center top;
-    outline: 2px solid black;
+	background: white repeat-y center top;
+    outline: 3px solid #cc092f;
     outline-offset: -2px;
 }
 
@@ -124,3 +130,46 @@ hr {
     font-family: Arial, Helvetica, sans-serif;
     padding: 0px 0px 0px 25px;
 }
+
+h3 {
+    font-size: 140%;    
+    padding: 12px 10px 5px 10px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    margin:10px; padding: 10px 8px;
+    background: #fff;
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+label {
+    display:block;
+    font-weight:bold;
+    margin:5px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input, select, textarea {
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;  color:#777;
+    background: #FAFAFA;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #D4D4D4 #ebebeb #ebebeb #d4d4d4; 
+    color: black;
+}
+textarea {
+    width: 850px;
+    height: 250px;
+    display: block; 
+}
+input.button { 
+    font-family: Arial, Helvetica, sans-serif;
+    height: 24px;
+    margin: 0;
+    padding: 2px 3px; 
+    color: #FFF;
+    background: #cc092f;
+    
+} 
