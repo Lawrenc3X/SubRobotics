@@ -103,8 +103,8 @@ ul li:hover {
     position: relative;
     width: 900px;
     margin: 0 auto;
-	background: white repeat-y center top;
-    outline: 3px solid #cc092f;
+	background: #e0e0e0 repeat-y center top;
+    outline: 3px solid black;
     outline-offset: -2px;
 }
 
