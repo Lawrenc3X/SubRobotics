@@ -177,4 +177,10 @@ input.button {
     height: 24px;
     color: #FFF;
     background: #cc092f;
-} 
+}
+
+#robot {
+    display: block;
+    margin: 0 auto;
+    width: 750px;
+}
