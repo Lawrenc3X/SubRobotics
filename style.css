@@ -1,5 +1,6 @@
 body {
-    background: #E1DDD9; /* #dbdbdb; */
+    background: white; /* #dbdbdb; */
+    text-align: center;
 }
 
 #header {
@@ -55,9 +56,10 @@ p#slogan {
 
 ul {
 	position: absolute;
-    /* border: 1px solid #cc092f; */
+    border: 1px solid #cc092f;
 	list-style: none;
 	text-transform: uppercase;
+    text-align: center;
 	padding: 0;	margin: 0;	
 	right: 0; bottom: 0;
     background-color: #000;
@@ -74,7 +76,7 @@ ul {
 
 
 ul li {
-    outline-offset: -5px;
+    outline-offset: -4px;
 	display: inline-flex;
 	margin: 0; padding:0 ;
 }
@@ -91,27 +93,30 @@ ul li a {
 	text-decoration: none;
 }
 
+
 ul li:hover {
     outline: 2px dashed white;
+
 }
 
 #active {
     outline: 2px solid white;
+
 }
+
 
 #content-wrap {
     position: relative;
     width: 900px;
     margin: 0 auto;
-	background: #FFF repeat-y center top;
-    /* outline: 3px solid #cc092f; */
-    /* outline-offset: -2px; */
+	background: white repeat-y center top;
+    outline: 3px solid #cc092f;
+    outline-offset: -2px;
 }
 
 #content-wrap h2 {
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px 0px 0px 10px;
-    color: #5c5c5c;
 }
 
 hr {
@@ -122,7 +127,6 @@ hr {
     position: relative;
     top: -15px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
     padding: 0px 10px 0px 10px;
 }
 
@@ -130,11 +134,11 @@ hr {
     position: relative;
     top: -15px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
     padding: 0px 0px 0px 25px;
 }
 
 h3 {
+    text-align: center;
     font-size: 140%;    
     padding: 12px 10px 5px 10px;
     color: black;
@@ -142,11 +146,9 @@ h3 {
 }
 
 form {
-    position:relative;
-    top:-14px;
-    padding: 0px 0px 0px 10px;
-    /*background: #fff;*/
-    /*border: 1px solid black;*/
+    margin:10px; padding: 10px 8px;
+    background: #fff;
+    border: 1px solid black;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -168,22 +170,16 @@ input, select, textarea {
 }
 
 textarea {
-    width: 850px;
+    width: 650px;
     height: 250px;
     display: block; 
 }
-
-input.button {
-    position: relative;
-    top: 7px;
+input.button { 
     font-family: Arial, Helvetica, sans-serif;
     height: 24px;
+    margin: 0;
+    padding: 2px 3px; 
     color: #FFF;
     background: #cc092f;
-}
-
-#robot {
-    display: block;
-    margin: 0 auto;
-    width: 750px;
-}
+    
+} 

@@ -15,7 +15,7 @@
             });
         </script>
     </head>
-    <body>
+    <body style="text-align: left;">
         <div id="header">
             <div class="fadein">
                 <img src="images/1.jpeg" style="top: -350px;">
@@ -34,16 +34,29 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="auv.html">Our AUV</a></li>
             <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="sponsor.html">Sponsor</a></li>
             <li id="active"><a href="contact.html">Contact</a></li>
         </ul>
 
-        <div id="content-wrap">
-            <h2>Contact Us</h2>
-            <p class="post-meta">
-                <a href="mailto:akay@stgeorges.bc.ca">akay@stgeorges.bc.ca</a>
-            </p>
-        </div>
+    <div id="content-wrap">
+            <h3>Contact Us</h3>
+            <form id="form1" name="form1" action="mailto:akay@stgeorges.bc.ca" method="post">           
+            <p>         
+            <label>Name</label>
+            <input name="name" id="name" type="text" size="30" />
+            <label>Email</label>
+            <input name="email" id="email" type="text" size="30" />
+            <label>Your Comments</label>
+            <textarea name="question" id="question" rows="5" cols="5"></textarea>
+            <br />  
+            <input class="button" name="submit" value="Submit" id="submit" type="submit" />     
+                    
+            </form>             
+            <br />  
+            
+            <br/><br/>     
+    </div>
 
-        <footer style="padding:5px 15px"> <small>&copy; Copyright 2021, SGSRobotics</small> </footer>
+        <footer style="padding:5px 15px; text-align: left;"> <small>&copy; Copyright 2021, SGSRobotics</small> </footer>
     </body>
 </html>
