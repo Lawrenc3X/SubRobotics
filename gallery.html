@@ -16,10 +16,13 @@
 
             function toggleTheme() {
                 var element = document.body;
-                var wraps = document.getElementsByClassName("content-wrap");
                 element.classList.toggle("dark-mode");
-                for(var i = 0; i < wraps.length; i++) {
-                    wraps[i].classList.toggle("dark-mode");
+
+                let theme = localStorage.getItem("theme");
+                if (theme && theme === "dark-mode") {
+                    localStorage.setItem("theme", "");
+                } else {
+                    localStorage.setItem("theme", "dark-mode");
                 }
             }
         </script>
@@ -46,10 +49,19 @@
             <li><a href="sponsor.html">Sponsor</a></li>
             <li><a href="contact.html">Contact</a></li>
             <label class="switch">
-                <input type="checkbox" onclick="toggleTheme()">
+                <input id="checkbox" type="checkbox" onclick="toggleTheme()">
                 <span class="slider round"></span>
             </label>
         </ul>
+
+        <script>
+            let onpageLoad = localStorage.getItem("theme");
+            if (onpageLoad) {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+                document.getElementById("checkbox").checked = true;
+            }
+        </script>
 
         <div class="content-wrap">
             <h2 class="center">Photo Gallery</h2>
@@ -60,7 +72,9 @@
             </p>
         </div>
 
-        <footer style="padding:5px 15px;"> <small>&copy; Copyright 2021, SGSRobotics</small> </footer>
+        <footer style="padding:5px 15px;">
+            <small>&copy; Copyright 2021, SGSRobotics. Photos by Ben Kang.</small>
+        </footer>
     </body>
 </html>
 

@@ -3,7 +3,8 @@ body {
 }
 
 .dark-mode {
-    background: #E1DDD9;
+    background: /*#C2B389;*/ /*#CEC3A5;*/ /*#CFC5A9;*/ #D1C7AD;
+    /* https://htmlcolors.com/hex/c2b389 */
 }
 
 /* HEADER */
@@ -40,6 +41,7 @@ p#slogan {
 
 .fadein {
     position: relative;
+    top: 5px;
     width: 900px;
     height: 300px;
     overflow: hidden;
@@ -179,7 +181,7 @@ input:checked + .slider:before {
     outline-offset: -2px;
 }
 
-.content-wrap.dark-mode {
+body.dark-mode > div.content-wrap {
     position: relative;
     width: 900px;
     margin: 0 auto;
