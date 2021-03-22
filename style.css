@@ -1,7 +1,13 @@
 body {
-    background: white; /* #dbdbdb; */
-    text-align: center;
+    background: white; /*#F8F9FA;*/
 }
+
+.dark-mode {
+    background: /*#C2B389;*/ /*#CEC3A5;*/ /*#CFC5A9;*/ #D1C7AD;
+    /* https://htmlcolors.com/hex/c2b389 */
+}
+
+/* HEADER */
 
 #header {
     position: relative;
@@ -10,33 +16,14 @@ body {
     padding: 0px 0px 0px 0px;
 }
 
-.fadein {
-    position: relative;
-    width: 900px;
-    height: 300px;
-    overflow: hidden;
-}
-
-.fadein img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 0;
-    width: 1024px;/*4096px;*/
-    height: 683px/*2731px;*/
-}
-
 h1#logo-text a {
 	position: absolute;
 	margin: 0; padding: 0;
-	/* font: bold 60px 'Trebuchet MS', Arial, Sans-serif; */
     font: bold 60px Arial, Verdana, Helvetica, sans-serif;
 	letter-spacing: -2px;
 	color: #cc092f;
 	text-decoration: none;
-
-	/* change the values of top and left to adjust the position of the logo*/
-	top: 5px; left: 15px;
+    top: 5px; left: 15px;
 }
 
 h1#logo-text span {
@@ -49,31 +36,45 @@ p#slogan {
 	font: bold 16px 'Trebuchet MS', Arial, Sans-serif;
 	text-transform: none;
 	color: #cc092f;
-
-	/* change the values of top and left to adjust the position of the slogan*/
 	top: 65px; left: 45px;
 }
+
+.fadein {
+    position: relative;
+    top: 5px;
+    width: 900px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.fadein img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    width: 1024px;
+    height: 683px;
+}
+
+/* NAVBAR */
 
 ul {
 	position: absolute;
     border: 1px solid #cc092f;
 	list-style: none;
 	text-transform: uppercase;
-    text-align: center;
 	padding: 0;	margin: 0;	
 	right: 0; bottom: 0;
     background-color: #000;
     z-index: 999 !important;
     overflow: hidden;
     background-color: #cc092f;
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     width: 900px;
     margin: 0 auto;
 }
-
-
 
 ul li {
     outline-offset: -4px;
@@ -93,40 +94,116 @@ ul li a {
 	text-decoration: none;
 }
 
-
 ul li:hover {
     outline: 2px dashed white;
-
 }
 
 #active {
     outline: 2px solid white;
-
 }
 
+/* SWITCH */
 
-#content-wrap {
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  top: -6px;
+  left: 305px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* CONTENT */
+
+.center {
+    text-align: center;
+}
+
+.content-wrap {
     position: relative;
     width: 900px;
     margin: 0 auto;
-	background: white repeat-y center top;
+	background: #FFF repeat-y center top;
     outline: 3px solid #cc092f;
     outline-offset: -2px;
 }
 
-#content-wrap h2 {
+body.dark-mode > div.content-wrap {
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+	background: #FFF repeat-y center top;
+    outline: 3px solid #FFF;
+    outline-offset: -2px;
+
+}
+
+.content-wrap h2 {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
     padding: 10px 0px 0px 10px;
 }
 
-hr {
-    border: 1px solid black;
-}
+/* POSTS */
 
 .post-meta {
     position: relative;
     top: -15px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
     padding: 0px 10px 0px 10px;
 }
 
@@ -134,52 +211,29 @@ hr {
     position: relative;
     top: -15px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
     padding: 0px 0px 0px 25px;
 }
 
-h3 {
-    text-align: center;
-    font-size: 140%;    
-    padding: 12px 10px 5px 10px;
-    color: black;
+/* SPONSOR */
+
+.sponsor-text {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-form {
-    margin:10px; padding: 10px 8px;
-    background: #fff;
-    border: 1px solid black;
-    font-family: Arial, Helvetica, sans-serif;
+.sponsor-logo {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 82.5px;
+    top: -8px;
 }
 
-label {
-    display:block;
-    font-weight:bold;
-    margin:5px 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
+/* ROBOT */
 
-input, select, textarea {
-    padding: 5px;
-    font-family: Arial, Helvetica, sans-serif;  color:#777;
-    background: #FAFAFA;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #D4D4D4 #ebebeb #ebebeb #d4d4d4; 
-    color: black;
+#robot{
+    display: block;
+    width: 700px;
+    margin: 0 auto;
 }
-
-textarea {
-    width: 650px;
-    height: 250px;
-    display: block; 
-}
-input.button { 
-    font-family: Arial, Helvetica, sans-serif;
-    height: 24px;
-    margin: 0;
-    padding: 2px 3px; 
-    color: #FFF;
-    background: #cc092f;
-    
-} 

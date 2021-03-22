@@ -13,6 +13,18 @@
                      .end().appendTo('.fadein');}, 
                   4000);
             });
+
+            function toggleTheme() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+
+                let theme = localStorage.getItem("theme");
+                if (theme && theme === "dark-mode") {
+                    localStorage.setItem("theme", "");
+                } else {
+                    localStorage.setItem("theme", "dark-mode");
+                }
+            }
         </script>
     </head>
     <body>
@@ -36,18 +48,33 @@
             <li id="active"><a href="gallery.html">Gallery</a></li>
             <li><a href="sponsor.html">Sponsor</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <label class="switch">
+                <input id="checkbox" type="checkbox" onclick="toggleTheme()">
+                <span class="slider round"></span>
+            </label>
         </ul>
 
-        <div id="content-wrap">
-            <h2>Photo Gallery</h2>
-            <p style="position:relative; top:-9px; font-family: Arial, Helvetica, sans-serif;padding:0px 10px 0px 12px;">
-                <a data-flickr-embed="true" href="https://www.flickr.com/gp/9936561@N08/ev0629" title="WP_20170716_12_10_02_Pro" target="_blank">
+        <script>
+            let onpageLoad = localStorage.getItem("theme");
+            if (onpageLoad) {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+                document.getElementById("checkbox").checked = true;
+            }
+        </script>
+
+        <div class="content-wrap">
+            <h2 class="center">Photo Gallery</h2>
+            <p class="post-meta center">
+                <a href="https://www.flickr.com/gp/9936561@N08/ev0629" target="_blank">
                     <img src="https://farm5.staticflickr.com/4291/36012747976_83d2278820.jpg" width="500" height="281" alt="WP_20170716_12_10_02_Pro">
                 </a>
             </p>
         </div>
 
-        <footer style="padding:5px 15px; text-align: left;"> <small>&copy; Copyright 2021, SGSRobotics</small> </footer>
+        <footer style="padding:5px 15px;">
+            <small>&copy; Copyright 2021, SGSRobotics. Photos by Ben Kang.</small>
+        </footer>
     </body>
 </html>
 
