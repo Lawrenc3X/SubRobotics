@@ -3,7 +3,7 @@ body {
 }
 
 .dark-mode {
-    background: /*#C2B389;*/ /*#CEC3A5;*/ /*#CFC5A9;*/ #D1C7AD;
+    background: /*#C2B389;*/ /*#CEC3A5;*/ /*#CFC5A9;*/ /*#D1C7AD*/ #282923;
     /* https://htmlcolors.com/hex/c2b389 */
 }
 
@@ -185,8 +185,8 @@ body.dark-mode > div.content-wrap {
     position: relative;
     width: 900px;
     margin: 0 auto;
-	background: #FFF repeat-y center top;
-    outline: 3px solid #FFF;
+    background: #282923 repeat-y center top;
+    color: #D1D0CE;
     outline-offset: -2px;
 
 }
