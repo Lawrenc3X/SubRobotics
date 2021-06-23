@@ -1,100 +1,37 @@
+---
+---
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>SGS Robotics</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="images/favicon.ico" rel="shortcut icon" type="image/ico">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-        <script type="text/javascript">
-            $(function(){
-                $('.fadein img:gt(0)').hide();
-                setInterval(function(){
-                  $('.fadein :first-child').fadeOut(1500)
-                     .next('img').fadeIn(1500)
-                     .end().appendTo('.fadein');}, 
-                  4000);
-            });
+  {% include head.html %}
+  <body>
+    {% include header.html %}
 
-            function toggleTheme() {
-                var element = document.body;
-                element.classList.toggle("dark-mode");
+    <div class="content-wrap">
+      <h2 class="center">Meet Our Robot</h2>
+      <p class="post-meta center">
+      <object type="image/svg+xml" data="images/robot.svg" id="robot">
+        Robot SVG <!-- fallback image in CSS -->
+      </object>
+      </p>
+      <p class="post-meta">
+      <b>Basic Stats:</b><br>
+      Hull - a re-purposed 1990's era Ikelite video camera housing
+      modified with a replacement cast acrylic tube to increase
+      length to 22".<br>
+      Propulsion - 8 Seadrone thrusters.<br>
+      Propulsion configuration - ROV diamond with variable depth and
+      pitch/roll mecahnism.<br>
+      Processor core - Raspberry Pi 3.<br>
+      Sensors - OceanServer OS-5000USD w/ 24bit AD depth sensor option,
+      MEAS pressure transducer, CMU5 pixycam robot vision.<br>
+      Power - 11.1V LiPo pack for propulsion, consumer USB cell phone
+      battery bank for Processor core, AA battery pack for
+      misc. auxiliary circuits.
+      </p>
+      <p class="post-meta center">
+      <a href="https://cad.onshape.com/documents/f5e12868ace6738634676402/w/bdaf8a213dfc5d241ef59a12/e/007c4eaaa55f111722c67fd1" target="_blank">View Model On Onshape</a>
+      </p>
+    </div>
 
-                let theme = localStorage.getItem("theme");
-                if (theme && theme === "dark-mode") {
-                    localStorage.setItem("theme", "");
-                } else {
-                    localStorage.setItem("theme", "dark-mode");
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <div id="header">
-            <div class="fadein">
-                <img src="images/1.jpeg" style="top: -350px;">
-                <img src="images/2.jpeg" style="top: -300px;">
-                <img src="images/3.jpeg" style="top: -100px;">
-                <img src="images/4.jpeg" style="top: -300px;">
-                <img src="images/5.jpeg" style="top: -300px;">
-            </div>
-
-            <h1 id="logo-text"><a href="index.html" title="">SGS<span>Robotics</span></a></h1>
-            <p id="slogan">SGS AUV Robotics Team</p>
-        </div>
-
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li id="active"><a href="auv.html">Our AUV</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="sponsor.html">Sponsor</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <label class="switch">
-                <input id="checkbox" type="checkbox" onclick="toggleTheme()">
-                <span class="slider round"></span>
-            </label>
-        </ul>
-
-        <script>
-            let onpageLoad = localStorage.getItem("theme");
-            if (onpageLoad) {
-                var element = document.body;
-                element.classList.toggle("dark-mode");
-                document.getElementById("checkbox").checked = true;
-            }
-        </script>
-
-        <div class="content-wrap">
-            <h2 class="center">Meet Our Robot</h2>
-            <p class="post-meta center">
-                <object type="image/svg+xml" data="images/robot.svg" id="robot">
-                    Robot SVG <!-- fallback image in CSS -->
-                </object>
-            </p>
-            <p class="post-meta">
-                <b>Basic Stats:</b><br>
-                Hull - a re-purposed 1990's era Ikelite video camera housing
-                modified with a replacement cast acrylic tube to increase
-                length to 22".<br>
-                Propulsion - 8 Seadrone thrusters.<br>
-                Propulsion configuration - ROV diamond with variable depth and
-                pitch/roll mecahnism.<br>
-                Processor core - Raspberry Pi 3.<br>
-                Sensors - OceanServer OS-5000USD w/ 24bit AD depth sensor option,
-                MEAS pressure transducer, CMU5 pixycam robot vision.<br>
-                Power - 11.1V LiPo pack for propulsion, consumer USB cell phone
-                battery bank for Processor core, AA battery pack for
-                misc. auxiliary circuits.
-            </p>
-            <p class="post-meta center">
-                <a href="https://cad.onshape.com/documents/f5e12868ace6738634676402/w/bdaf8a213dfc5d241ef59a12/e/007c4eaaa55f111722c67fd1" target="_blank">View Model On Onshape</a>
-            </p>
-        </div>
-
-        <footer style="padding:5px 15px;">
-            <small>&copy; Copyright 2021, SGSRobotics. Photos by Ben Kang.</small>
-        </footer>
-    </body>
+    {% include footer.html %}  </body>
 </html>
-
-

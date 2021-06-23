@@ -1,0 +1,28 @@
+<head>
+  <title>SGS Robotics</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="images/favicon.ico" rel="shortcut icon" type="image/ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+  <script type="text/javascript">
+    $(function(){
+      $('.fadein img:gt(0)').hide();
+      setInterval(function(){
+        $('.fadein :first-child').fadeOut(1500)
+          .next('img').fadeIn(1500)
+          .end().appendTo('.fadein');}, 
+        4000);
+    });
+
+    function toggleTheme() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+
+      let theme = localStorage.getItem("theme");
+      if (theme && theme === "dark-mode") {
+        localStorage.setItem("theme", "");
+      } else {
+        localStorage.setItem("theme", "dark-mode");
+      }
+    }
+  </script>
+</head>
