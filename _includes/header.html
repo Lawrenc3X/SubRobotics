@@ -12,36 +12,24 @@
 </div>
 
 <ul>
-  <li
-      {% if page.name == "index.html" %}
-      id="active"
-      {% endif %}>
-    <a href="index.html">Home</a></li>
-  <li
-      {% if page.name == "about.html" %}
-      id="active"
-      {% endif %}>
-    <a href="about.html">About Us</a></li>
-  <li
-      {% if page.name == "auv.html" %}
-      id="active"
-      {% endif %}>
-    <a href="auv.html">Our AUV</a></li>
-  <li
-      {% if page.name == "gallery.html" %}
-      id="active"
-      {% endif %}>
-    <a href="gallery.html">Gallery</a></li>
-  <li
-      {% if page.name == "sponsor.html" %}
-      id="active"
-      {% endif %}>
-    <a href="sponsor.html">Sponsor</a></li>
-  <li
-      {% if page.name == "contact.html" %}
-      id="active"
-      {% endif %}>
-    <a href="contact.html">Contact</a></li>
+  <li {% if page.name == "index.html" %} id="active" {% endif %}>
+    <a href="index.html">Home</a>
+  </li>
+  <li {% if page.name == "about.html" %} id="active" {% endif %}>
+    <a href="about.html">About Us</a>
+  </li>
+  <li {% if page.name == "auv.html" %} id="active" {% endif %}>
+    <a href="auv.html">Our AUV</a>
+  </li>
+  <li {% if page.name == "gallery.html" %} id="active" {% endif %}>
+    <a href="gallery.html">Gallery</a>
+  </li>
+  <li {% if page.name == "sponsor.html" %} id="active" {% endif %}>
+    <a href="sponsor.html">Sponsor</a>
+  </li>
+  <li {% if page.name == "contact.html" %} id="active" {% endif %}>
+    <a href="contact.html">Contact</a>
+  </li>
   <label class="switch">
     <input id="checkbox" type="checkbox" onclick="toggleTheme()">
     <span class="slider round"></span>
@@ -49,8 +37,8 @@
 </ul>
 
 <script>
-  let on.activeLoad = localStorage.getItem("theme");
-  if (on.activeLoad) {
+  let activeLoad = localStorage.getItem("theme");
+  if (activeLoad) {
       var element = document.body;
       element.classList.toggle("dark-mode");
       document.getElementById("checkbox").checked = true;

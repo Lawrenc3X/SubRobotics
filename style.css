@@ -208,6 +208,10 @@ body.dark-mode > div.content-wrap > p.post-meta > a:visited {
   padding: 10px 0px 0px 10px;
 }
 
+h2.no-info {
+  padding: 10px;
+}
+
 /* POSTS */
 
 .post-meta {
@@ -247,4 +251,6 @@ body.dark-mode > div.content-wrap > p.post-meta > a:visited {
   display: block;
   width: 700px;
   margin: 0 auto;
+  padding: 10px;
+  background-color: #35637c;
 }
