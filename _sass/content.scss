@@ -26,9 +26,7 @@ body.dark-mode > div.content-wrap {
 }
 
 body.dark-mode > div.content-wrap,
-body.dark-mode > div.container > p,
-body.dark-mode > div.container > h1,
-body.dark-mode > footer{
+body.dark-mode > div > footer{
   color: $dark-mode-text;
 }
 
