@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>{{ page.title }}</title>
-    <link type="text/css" rel="stylesheet" href="style.css">
-    {% if page.style %} {
+    <link type="text/css" rel="stylesheet" href="/style.css">
+    {% if page.style %}
       <style>
         {% include_relative css/{{page.style}}.css %}
       </style>
