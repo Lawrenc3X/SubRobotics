@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-url: "https://lawrenc3x.github.io/SubRobotics/"
+url: "https://lawrenc3x.github.io/SubRobotics"
 
 theme: null
 
