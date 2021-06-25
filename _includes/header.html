@@ -1,35 +1,22 @@
 <div id="header">
   <div class="fadein">
-    <img src="images/1.jpeg" style="top: -350px;">
-    <img src="images/2.jpeg" style="top: -300px;">
-    <img src="images/3.jpeg" style="top: -100px;">
-    <img src="images/4.jpeg" style="top: -300px;">
-    <img src="images/5.jpeg" style="top: -300px;">
+    <img src="/images/1.jpeg" style="top: -350px;">
+    <img src="/images/2.jpeg" style="top: -300px;">
+    <img src="/images/3.jpeg" style="top: -100px;">
+    <img src="/images/4.jpeg" style="top: -300px;">
+    <img src="/images/5.jpeg" style="top: -300px;">
   </div>
 
   <h1 id="logo-text"><a href="index.html" title="">SGS<span>Robotics</span></a></h1>
   <p id="slogan">SGS AUV Robotics Team</p>
 </div>
 
-<ul>
-  <li {% if page.name == "index.html" %} id="active" {% endif %}>
-    <a href="index.html">Home</a>
-  </li>
-  <li {% if page.name == "about.html" %} id="active" {% endif %}>
-    <a href="about.html">About Us</a>
-  </li>
-  <li {% if page.name == "auv.html" %} id="active" {% endif %}>
-    <a href="auv.html">Our AUV</a>
-  </li>
-  <li {% if page.name == "gallery.html" %} id="active" {% endif %}>
-    <a href="gallery.html">Gallery</a>
-  </li>
-  <li {% if page.name == "sponsor.html" %} id="active" {% endif %}>
-    <a href="sponsor.html">Sponsors</a>
-  </li>
-  <li {% if page.name == "contact.html" %} id="active" {% endif %}>
-    <a href="contact.html">Contact</a>
-  </li>
+<ul class="nav">
+  {% for content_page in site.content %}
+    <li {% if content_page == page %} id="active" {% endif %}>
+      <a href={{content_page.url}}>{{content_page.title}}</a>
+    </li>
+  {% endfor %}
   <label class="switch">
     <input id="checkbox" type="checkbox" onclick="toggleTheme()">
     <span class="slider round"></span>

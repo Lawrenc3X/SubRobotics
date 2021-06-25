@@ -1,0 +1,42 @@
+.center {
+  text-align: center;
+}
+
+.content-wrap {
+  position: relative;
+  width: 900px;
+  margin: 0 auto;
+  background: $background repeat-y center top;
+  outline: 3px solid $sgs-red;
+  outline-offset: -2px;
+}
+
+.content-wrap h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 10px 0px 0px 10px;
+}
+
+h2.no-info {
+  padding: 10px;
+}
+
+body.dark-mode > div.content-wrap {
+  background: $dark-mode-background repeat-y center top;
+}
+
+body.dark-mode > div.content-wrap,
+body.dark-mode > div.container > p,
+body.dark-mode > div.container > h1,
+body.dark-mode > footer{
+  color: $dark-mode-text;
+}
+
+p.post-meta > a:visited {
+  color: $anchor;
+}
+
+body.dark-mode > div.content-wrap > p.post-meta > a,
+body.dark-mode > div.content-wrap > p.post-meta > a:visited {
+  color: $dark-mode-anchor;
+}

@@ -1,0 +1,23 @@
+---
+---
+$sgs-red: #CC092F;
+$background: white;
+$text: black;
+$anchor: blue;
+$dark-mode-background: #2F3136;
+$dark-mode-text: #D1D0CE;
+$dark-mode-anchor: #68A6F8;
+
+@import "header";
+@import "navbar";
+@import "switch";
+@import "content";
+@import "posts";
+
+body {
+  background: $background;
+}
+
+.dark-mode {
+  background: $dark-mode-background;
+}

@@ -49,3 +49,16 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - README.md
+
+collections:
+  content:
+    output: true
+      # Custom order is a Jekyll 4 feature but GitHub Pages is stuck on Jekyll 3
+      # Current workaround is to use pretend dates which order the pages by default
+    order:
+      - index.html
+      - about.html
+      - auv.html
+      - gallery.html
+      - sponsor.html
+      - contact.html

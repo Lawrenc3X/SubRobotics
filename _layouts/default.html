@@ -2,8 +2,11 @@
 <html>
   <head>
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="images/favicon.ico" rel="shortcut icon" type="image/ico">
+    <link type="text/css" rel="stylesheet" href="/style.css">
+    <style>
+      {% if page.style %} {% include_relative css/{{page.style}}.css %} {% endif %}
+    </style>
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
     <script type="text/javascript">
       $(function(){
