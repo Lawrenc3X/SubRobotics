@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>{{ page.title }}</title>
-    <link type="text/css" rel="stylesheet" href={{"style.css" | absolute_url}}>
+    <link type="text/css" rel="stylesheet" href="style.css">
     {% if page.style %} {
       <style>
         {% include_relative css/{{page.style}}.css %}
