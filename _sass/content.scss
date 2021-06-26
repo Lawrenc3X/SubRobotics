@@ -6,9 +6,7 @@
   position: relative;
   width: 900px;
   margin: 0 auto;
-  background: $background repeat-y center top;
-  outline: 3px solid $sgs-red;
-  outline-offset: -2px;
+  background: white;
 }
 
 .content-wrap h2 {
@@ -22,7 +20,7 @@ h2.no-info {
 }
 
 body.dark-mode > div.content-wrap {
-  background: $dark-mode-background repeat-y center top;
+  background: $dark-mode-background;
 }
 
 body.dark-mode > div.content-wrap,

@@ -1,7 +1,7 @@
 ---
 ---
 $sgs-red: #CC092F;
-$background: white;
+$background: #ccc;
 $text: black;
 $anchor: blue;
 $dark-mode-background: #2F3136;
@@ -15,7 +15,13 @@ $dark-mode-anchor: #68A6F8;
 @import "posts";
 
 body {
-  background: $background;
+  image-rendering: pixelated;
+  background: $background url({{"/images/bg.png" | absolute_url}}) repeat-y center top;
+}
+
+body.dark-mode {
+  image-rendering: pixelated;
+  background: $dark-mode-background url({{"/images/bg.png" | absolute_url}}) repeat-y center top;
 }
 
 .dark-mode {
