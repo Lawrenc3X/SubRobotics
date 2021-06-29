@@ -7,6 +7,7 @@ $anchor: blue;
 $dark-mode-background: #2F3136;
 $dark-mode-text: #D1D0CE;
 $dark-mode-anchor: #68A6F8;
+$width: 840px;
 
 @import "header";
 @import "navbar";
@@ -22,6 +23,16 @@ body {
 body.dark-mode {
   image-rendering: pixelated;
   background: $dark-mode-background url({{"/images/bg.png" | absolute_url}}) repeat-y center top;
+}
+
+@media only screen and (max-width: 860px) {
+  body {
+    background: $background;
+  }
+
+  body.dark-mode {
+    background: $dark-mode-background;
+  }
 }
 
 .dark-mode {
