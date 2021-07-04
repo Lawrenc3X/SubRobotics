@@ -16,6 +16,7 @@ $width: 840px;
 @import "posts";
 
 body {
+  zoom: 80%;
   image-rendering: pixelated;
   background: $background url({{"/images/bg.png" | absolute_url}}) repeat-y center top;
 }
