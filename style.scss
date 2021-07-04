@@ -26,7 +26,7 @@ body.dark-mode {
   background: $dark-mode-background url({{"/images/bg.png" | absolute_url}}) repeat-y center top;
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 710px) {
   body {
     background: $background;
   }
